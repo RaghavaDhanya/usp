@@ -6,9 +6,9 @@ int main(void)
 {
 	pid_t pid;
 	if((pid=fork())<0)
-	printf("fork error\n");
+		printf("fork error\n");
 	else if (pid==0)
-	exit(0);
+		exit(0);
 	sleep(4);
 	//wait();
 	system(PS);
