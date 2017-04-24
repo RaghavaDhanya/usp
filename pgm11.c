@@ -1,3 +1,6 @@
+/** This code doesn't belong to me and was given in class
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>

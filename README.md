@@ -1,6 +1,9 @@
 # USP Lab
 > Programs and scripts directly pushed from lab.
 
+### Lab Programs
+All the lab programs start with prefix 'pgm', Other extra programs have numbered name or don't start with pgm. 
+
 ### getposix.sh
 This script generates a C program which lists all the compile time posix constants
 
