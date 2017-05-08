@@ -9,7 +9,7 @@
 	int count =0,i,j;
 	char temp[MAX+MAX],temp2[MAX+MAX];
 %}
-%token ALPHA
+%token ALPHABET
 %left '|'
 %left '.'
 %nonassoc '*''+'
@@ -29,7 +29,7 @@ S: re '\n' {
 				printf("\n=>");
 				j=getREindex(temp);
 				temp[j]='\0';
-				sprintf(temp2,"%s%s%s",temp,productions[i],temp+j+2);
+				sprintf(temp2,"%s%s%s",temp,productions[i],(temp+j+2));
 				printf("%s",temp2);
 				strcpy(temp,temp2);
 			}
@@ -37,7 +37,7 @@ S: re '\n' {
 		printf("\n");
 		exit(0);
 	   }
-re: ALPHA  {
+re: ALPHABET  {
 		temp[0]=yylval;
 		temp[1]='\0';
 		strcpy(productions[count++],temp);
@@ -64,7 +64,7 @@ yylex()
 }
 yyerror()
 {
-	fprintf(stderr,"INVALID REGEX\n");
+	fprintf(stderr,"INVALID REGEXP\n");
 	exit(0);
 }
 int getREindex(const char *str)
