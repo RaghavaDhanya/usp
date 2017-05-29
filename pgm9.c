@@ -36,7 +36,7 @@ int main(int argc, char** argv)
 		strcat(str,argv[i++]);
 		strcat(str," ");
 	}
-	system(str);
+	system1(str);
 	return 0;
 }
 	
